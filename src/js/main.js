@@ -6,7 +6,7 @@
 // EMAILJS
 // ==========================================
 (function () {
-  const publicKey = 'TU_PUBLIC_KEY'; // TODO: Reemplazar con tu Public Key de EmailJS
+  const publicKey = 'm062kPwL_MQgVVeCi'; // TODO: Reemplazar con tu Public Key de EmailJS
   emailjs.init(publicKey);
 })();
 
@@ -109,8 +109,8 @@ function initContactForm() {
     // Crea una cuenta en https://www.emailjs.com/
     // Conecta un servicio, crea un template y completa:
     // ==========================================
-    const serviceID = 'TU_SERVICE_ID';   // TODO
-    const templateID = 'TU_TEMPLATE_ID'; // TODO
+    const serviceID = 'service_3s2ce1g';   // TODO
+    const templateID = 'template_gapp0co'; // TODO
 
     emailjs
       .sendForm(serviceID, templateID, this)
