@@ -1,0 +1,129 @@
+/* ============================================
+   spa estudio — Custom Styles
+   ============================================ */
+
+/* Smooth scroll for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Project card transitions for filter */
+.project-card {
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.project-card.hidden-card {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* Filter button active state */
+.filter-btn.active {
+  background-color: #5f2b40;
+  color: white;
+  box-shadow: 0 4px 12px rgba(95, 43, 64, 0.3);
+}
+
+.filter-btn:not(.active) {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.filter-btn:not(.active):hover {
+  background-color: #e5e7eb;
+}
+
+/* Navbar scroll state */
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+#navbar.scrolled #nav-logo {
+  color: #5f2b40;
+}
+
+#navbar.scrolled .nav-link {
+  color: #374151;
+}
+
+#navbar.scrolled .nav-link:hover {
+  color: #5f2b40;
+}
+
+#navbar.scrolled #nav-cta {
+  background-color: #5f2b40;
+  color: white;
+}
+
+#navbar.scrolled #nav-cta:hover {
+  background-color: #803d4f;
+}
+
+/* Navbar default (at top of page) */
+#navbar:not(.scrolled) {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+#navbar:not(.scrolled) #nav-logo {
+  color: white;
+}
+
+#navbar:not(.scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#navbar:not(.scrolled) .nav-link:hover {
+  color: #f6b9a7;
+}
+
+#navbar:not(.scrolled) #nav-cta {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #5f2b40;
+}
+
+#navbar:not(.scrolled) #nav-cta:hover {
+  background-color: white;
+}
+
+/* Mobile menu button */
+#menu-btn {
+  color: white;
+}
+
+#navbar.scrolled #menu-btn {
+  color: #374151;
+}
+
+/* Form message states */
+#form-message.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+#form-message.error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Selection color */
+::selection {
+  background-color: #b25b6c;
+  color: white;
+}
+
+/* Focus visible for accessibility */
+:focus-visible {
+  outline: 2px solid #b25b6c;
+  outline-offset: 2px;
+}
