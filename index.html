@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>spa estudio — Arquitectura & Diseño</title>
+  <title>Karen Ñanco Vásquez — Programadora Junior</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -29,25 +29,30 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body class="bg-white text-gray-800 font-sans antialiased">
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+  <!-- ============================================
+       NAVBAR
+  ============================================ -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <a href="#" class="text-xl font-bold tracking-tight transition-colors duration-300" id="nav-logo">spa estudio</a>
+        <a href="#" class="text-xl font-bold tracking-tight transition-colors duration-300" id="nav-logo">
+          <span class="hidden sm:inline">Karen Ñanco</span>
+          <span class="sm:hidden">KÑV</span>
+        </a>
 
-        <!-- Desktop nav -->
         <div class="hidden md:flex items-center space-x-10">
+          <a href="#about" class="nav-link text-sm font-medium tracking-wide transition-colors duration-300">SOBRE MÍ</a>
+          <a href="#skills" class="nav-link text-sm font-medium tracking-wide transition-colors duration-300">HABILIDADES</a>
           <a href="#portfolio" class="nav-link text-sm font-medium tracking-wide transition-colors duration-300">PORTAFOLIO</a>
           <a href="#contact" class="nav-link text-sm font-medium tracking-wide transition-colors duration-300">CONTACTO</a>
-          <a href="#contact" id="nav-cta" class="text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-300">Contáctanos</a>
+          <a href="#contact" id="nav-cta" class="text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-300">Trabajemos juntos</a>
         </div>
 
-        <!-- Mobile toggle -->
         <button id="menu-btn" class="md:hidden p-2 rounded-lg transition-colors duration-300" aria-label="Menú">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -56,140 +61,285 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
       <div class="px-4 py-4 space-y-3">
+        <a href="#about" class="block text-gray-700 font-medium hover:text-primary-500 transition-colors">Sobre mí</a>
+        <a href="#skills" class="block text-gray-700 font-medium hover:text-primary-500 transition-colors">Habilidades</a>
         <a href="#portfolio" class="block text-gray-700 font-medium hover:text-primary-500 transition-colors">Portafolio</a>
         <a href="#contact" class="block text-gray-700 font-medium hover:text-primary-500 transition-colors">Contacto</a>
-        <a href="#contact" class="block text-center bg-primary-500 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-400 transition-colors">Contáctanos</a>
+        <a href="#contact" class="block text-center bg-primary-500 text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-primary-400 transition-colors">Trabajemos juntos</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- ============================================
+       HERO
+  ============================================ -->
   <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <div class="absolute inset-0 bg-cover bg-center scale-105" style="background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80');"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-500/85 via-primary-400/75 to-primary-300/65"></div>
-    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute inset-0 bg-cover bg-center scale-105" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-primary-500/90 via-primary-400/80 to-primary-300/70"></div>
+    <div class="absolute inset-0 hero-pattern"></div>
 
-    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-      <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tight">
-        Diseño que<br><span class="text-primary-100">trasciende</span>
+    <div class="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+      <p class="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-primary-100 mb-6 fade-in-up">Programadora Junior</p>
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-6 tracking-tight fade-in-up">
+        Código que<br>
+        <span class="text-primary-100">transforma ideas</span>
+        <br>en soluciones
       </h1>
-      <p class="text-base sm:text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-        Estudio de arquitectura especializado en proyectos públicos y privados. Innovación, eficiencia energética y estética minimalista en cada espacio que diseñamos.
+      <p class="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed font-light fade-in-up">
+        Especializada en Python, Django y React. Apasionada por crear aplicaciones web funcionales, limpias y con impacto.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#portfolio" class="bg-white text-primary-500 px-8 py-3.5 rounded-lg font-semibold hover:bg-primary-100 transition-all duration-300 shadow-lg hover:shadow-xl">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in-up">
+        <a href="#portfolio" class="bg-white text-primary-500 px-8 py-3.5 rounded-lg font-semibold hover:bg-primary-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
           Ver proyectos
         </a>
-        <a href="#contact" class="border-2 border-white/80 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-          Contáctanos
+        <a href="#contact" class="border-2 border-white/70 text-white px-8 py-3.5 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+          Contáctame
         </a>
       </div>
     </div>
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
       </svg>
     </div>
   </section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio" class="py-24 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Portafolio</h2>
-        <p class="text-gray-500 mt-3 text-lg">Explora nuestros proyectos</p>
+  <!-- ============================================
+       SOBRE MÍ
+  ============================================ -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Sobre mí</h2>
+        <div class="w-16 h-1 bg-primary-200 mx-auto mt-4 rounded-full"></div>
       </div>
 
-      <!-- Filter buttons -->
-      <div class="flex flex-wrap justify-center gap-3 mb-14">
-        <button data-filter="all" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Todos</button>
-        <button data-filter="publico" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Público</button>
-        <button data-filter="privado" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Privado</button>
-      </div>
-
-      <!-- Project grid -->
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- Proyecto 1: Centro Cívico Metropolitano -->
-        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500" data-category="publico">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=600&h=400&q=80" alt="Centro Cívico Metropolitano" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-105">
-            <span class="absolute top-4 left-4 bg-primary-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Público</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Centro Cívico Metropolitano</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">Propuesta conceptual para un edificio gubernamental de alta eficiencia energética, con áreas peatonales integradas y fachada bioclimática.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Arquitectura</span>
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Ing. Estructural</span>
-            </div>
+      <div class="grid md:grid-cols-5 gap-12 items-center">
+        <div class="md:col-span-2 fade-in-up">
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1488590528505-98d2b853aba4?auto=format&fit=crop&w=400&h=500&q=80"
+                 alt="Karen Ñanco Vásquez"
+                 class="w-full max-w-sm mx-auto rounded-2xl shadow-xl object-cover h-[28rem]">
+            <div class="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-primary-200 -z-10"></div>
           </div>
         </div>
 
-        <!-- Proyecto 2: Complejo Residencial Altura -->
-        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500" data-category="privado">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1d3fa86c6c?auto=format&fit=crop&w=600&h=400&q=80" alt="Complejo Residencial Altura" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-105">
-            <span class="absolute top-4 left-4 bg-primary-400/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Privado</span>
+        <div class="md:col-span-3 fade-in-up">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">
+            ¡Hola! Soy <span class="text-primary-400">Karen</span>
+          </h3>
+          <div class="space-y-4 text-gray-600 leading-relaxed">
+            <p>
+              Programadora junior apasionada por el desarrollo web. Me especializo en
+              <strong class="text-gray-800">Python, Django y React</strong>, y disfruto
+              creando aplicaciones que combinan funcionalidad con un diseño cuidado.
+            </p>
+            <p>
+              Creo firmemente en el poder del <strong class="text-gray-800">código limpio</strong>
+              y las buenas prácticas para construir software que marque la diferencia.
+              Cada proyecto es una oportunidad para aprender algo nuevo y superar desafíos.
+            </p>
+            <p>
+              Actualmente estoy en busca de nuevos retos que me permitan seguir creciendo
+              y aportar valor con cada línea de código. ¿Tienes un proyecto en mente?
+              ¡Hablemos!
+            </p>
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Complejo Residencial Altura</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">Diseño de tres torres habitacionales con foco en la integración de áreas verdes privadas y optimización de luz natural en zonas comunes.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Interiores</span>
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Paisajismo</span>
-            </div>
-          </div>
-        </div>
 
-        <!-- Proyecto 3: Escuela Técnica de Innovación -->
-        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500" data-category="publico">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&h=400&q=80" alt="Escuela Técnica de Innovación" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-105">
-            <span class="absolute top-4 left-4 bg-primary-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Público</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Escuela Técnica de Innovación</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">Plan maestro técnico para un centro educativo de alta complejidad, priorizando la distribución modular de aulas y laboratorios.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">HVAC</span>
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Acústica</span>
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Eléctrica</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Proyecto 4: Oficinas Corporativas C-Hub -->
-        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500" data-category="privado">
-          <div class="relative overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&h=400&q=80" alt="Oficinas Corporativas C-Hub" class="w-full h-56 object-cover transition-transform duration-700 hover:scale-105">
-            <span class="absolute top-4 left-4 bg-primary-400/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Privado</span>
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Oficinas Corporativas C-Hub</h3>
-            <p class="text-gray-600 text-sm leading-relaxed mb-4">Rediseño interior de una planta libre industrial reconvertida en espacios de co-work modernos y salas de reuniones modulares.</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Remodelación</span>
-              <span class="text-xs bg-primary-50 text-primary-600 px-2.5 py-1 rounded-full font-medium">Arq. Comercial</span>
-            </div>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <a href="#contact" class="bg-primary-500 text-white px-6 py-2.5 rounded-lg font-medium hover:bg-primary-400 transition-all duration-300 shadow-md hover:shadow-lg text-sm">
+              Conversemos
+            </a>
+            <a href="#portfolio" class="border border-gray-300 text-gray-700 px-6 py-2.5 rounded-lg font-medium hover:border-primary-300 hover:text-primary-500 transition-all duration-300 text-sm">
+              Ver portafolio
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Contacto</h2>
-        <p class="text-gray-500 mt-3 text-lg">Cuéntanos sobre tu proyecto</p>
+  <!-- ============================================
+       HABILIDADES
+  ============================================ -->
+  <section id="skills" class="py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Habilidades</h2>
+        <div class="w-16 h-1 bg-primary-200 mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-500 mt-4 text-lg">Tecnologías con las que trabajo</p>
       </div>
 
-      <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 fade-in-up">
+        <div class="skill-badge">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.25 18l-3-3 3-3 1.5 1.5-1.5 1.5 1.5 1.5-1.5 1.5zM13.5 20.25L9 15.75l1.5-1.5 4.5 4.5-4.5 4.5-1.5-1.5zM6.75 6l3 3-3 3-1.5-1.5 1.5-1.5-1.5-1.5L6.75 6zM10.5 3.75L15 8.25l-1.5 1.5-4.5-4.5 4.5-4.5 1.5 1.5-4.5 4.5z"/></svg>
+          </div>
+          <span class="skill-name">Python</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.096.535-4.791 0-7.288-2.166-7.288-6.32 0-4.002 2.65-6.6 6.753-6.6.748 0 1.451.08 2.158.229V0zm0 9.708v-.051c-.657-.534-1.468-.814-2.514-.814-1.859 0-3.001 1.127-3.001 3.803 0 2.574 1.015 3.678 3.001 3.678.859 0 1.594-.151 2.514-.45v-6.166zM21.25 8.959c2.096 0 3.75 1.592 3.75 4.3v6.54c0 .401-.332.733-.733.733h-1.727v-2.645c-.754.907-1.872 1.446-3.111 1.446-2.377 0-4.197-1.706-4.197-4.611 0-2.905 1.82-4.611 4.197-4.611 1.239 0 2.357.539 3.111 1.446v-.896c0-1.511-.906-2.392-2.405-2.392-1.033 0-1.925.35-2.716 1.004l-1.073-1.343c1.239-1.058 2.653-1.571 4.304-1.571zm.48 6.409c0-1.511-.957-2.449-2.306-2.449-1.412 0-2.357.963-2.357 2.449 0 1.486.945 2.449 2.357 2.449 1.349 0 2.306-.938 2.306-2.449z"/></svg>
+          </div>
+          <span class="skill-name">Django</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <span class="skill-name">Flask</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-2.446.806-2.846 1.926a8.497 8.497 0 0 0-1.54-.158c-.534 0-1.052.054-1.54.158-.4-1.12-1.5-1.927-2.846-1.927-1.634 0-2.96 1.326-2.96 2.96 0 .174.012.346.038.514C3.286 5.222 1.5 7.202 1.5 9.602c0 2.4 1.785 4.38 4.168 5.074a3.005 3.005 0 0 0-.04.514c0 1.634 1.326 2.96 2.96 2.96 1.346 0 2.446-.806 2.846-1.926.488.104 1.006.158 1.54.158.534 0 1.052-.054 1.54-.158.4 1.12 1.5 1.926 2.846 1.926 1.634 0 2.96-1.326 2.96-2.96 0-.174-.012-.346-.038-.514C20.714 13.98 22.5 12 22.5 9.602c0-2.4-1.785-4.38-4.168-5.074.026-.168.038-.34.038-.514 0-1.634-1.326-2.96-2.96-2.96z"/></svg></div>
+          <span class="skill-name">React</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.998 24c-.473 0-.94-.123-1.36-.357L8.27 22.377c-.646-.36-.33-.488-.116-.562.86-.3 1.036-.368 1.956-.892.1-.057.23-.035.332.026l1.523.904c.124.07.282.07.392 0l5.95-3.433c.194-.112.317-.323.317-.55V8.494c0-.223-.12-.432-.315-.546l-5.95-3.435a.463.463 0 0 0-.395 0L5.273 7.948a.63.63 0 0 0-.314.547v6.868c0 .226.124.436.322.55l1.63.941c.885.442 1.427-.078 1.427-.603V9.255c0-.325.262-.586.586-.586h.754c.323 0 .587.261.587.586v6.996c0 1.18-.642 1.857-1.76 1.857-.344 0-.615 0-1.372-.373l-1.559-.9c-.386-.224-.626-.637-.626-1.08V8.494c0-.438.24-.851.626-1.075l5.95-3.433c.365-.21.806-.21 1.168 0l5.95 3.433c.386.224.627.637.627 1.075v6.868c0 .438-.24.851-.627 1.075l-5.95 3.433a1.3 1.3 0 0 1-1.168 0l-1.524-.904c-.09-.053-.255-.112-.255-.254.03-.895.03-1.173 0-1.96 0-.1.133-.285.232-.347l1.56-.897c.13-.076.13-.25.13-.348V14.54c0-.254.252-.254.475-.254.223 0 1.305.254 1.305.254.258.046.402.252.402.508v2.605c0 .24-.122.467-.325.588l-1.632.945c-.12.07-.252.105-.38.105z"/></svg></div>
+          <span class="skill-name">Node.js</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.004 0L9.647 5.134a5.34 5.34 0 0 0-2.93 1.71L1.544 5.014l3.944 6.521a5.33 5.33 0 0 0 .001 2.93L1.544 20.97l5.155-1.829a5.34 5.34 0 0 0 2.93 1.71l1.357 5.134 1.357-5.134a5.34 5.34 0 0 0 2.93-1.71l5.155 1.83-3.944-6.521a5.33 5.33 0 0 0 .001-2.93l3.944-6.522-5.155 1.831a5.34 5.34 0 0 0-2.93-1.71L11.004 0zm.004 7.5a4.5 4.5 0 0 1 4.5 4.5 4.5 4.5 0 0 1-4.5 4.5 4.5 4.5 0 0 1-4.5-4.5 4.5 4.5 0 0 1 4.5-4.5z"/></svg></div>
+          <span class="skill-name">PostgreSQL</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 10.5v-2h-1v2h1zm0 3.5v-2h-1v2h1zm0-7v-2h-1v2h1zm4 3.5v-2h-1v2h1zm0 3.5v-2h-1v2h1zm0-7v-2h-1v2h1zm-8 7v-2h-1v2h1zm0-3.5v-2h-1v2h1zM12 0C7.03 0 3 4.03 3 9c0 4.63 3.5 8.43 8 8.94V22l4-4h4c2.76 0 5-2.24 5-5V9c0-4.97-4.03-9-9-9zm7 13c0 1.66-1.34 3-3 3h-4l-2 2v-2H9c-2.76 0-5-2.24-5-5V9c0-3.87 3.13-7 7-7s7 3.13 7 7v4z"/></svg></div>
+          <span class="skill-name">MongoDB</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></div>
+          <span class="skill-name">Git</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.983 3.452c-.592-.162-1.247-.249-1.983-.249-2.348 0-3.771.932-4.423 2.093.47-.381 1.442-.735 2.953-.735.492 0 1.057.036 1.655.078l1.798 3.35c.056-.084.12-.166.195-.245.507-.536 1.155-.868 1.518-.868.674 0 1.222.549 1.222 1.224s-.548 1.224-1.222 1.224c-.675 0-1.223-.55-1.223-1.224 0-.077.007-.153.02-.227l-1.795-3.346c-.665.628-1.079 1.501-1.079 2.468 0 .184.014.364.041.54l2.04 3.801c.099-.058.211-.087.33-.087.674 0 1.222.548 1.222 1.223 0 .675-.548 1.223-1.222 1.223s-1.223-.548-1.223-1.223c0-.161.031-.315.086-.455l-2.026-3.777c-.025.004-.049.01-.074.01-.647 0-1.356.407-1.843.773.293.655.737 1.833.95 2.501.314 1.003.382 1.83.107 2.313-.29.511-.801.639-1.336.639-.54 0-1.053-.162-1.456-.577-.34-.351-.586-.861-.618-1.811l-.002-.003c-.002-.063-.011-.121-.011-.184 0-.309.151-.584.383-.761l-.384-.716c-.386.222-.639.638-.639 1.115 0 .725.592 1.313 1.317 1.313.593 0 1.095-.393 1.248-.93.03.013.06.025.093.035.028.301.147.649.348.897.3.371.715.601 1.172.601.599 0 1.122-.268 1.454-.704.373-.49.517-1.134.22-1.944-.28-.766-.852-1.864-1.149-2.523-.228-.506-.293-1.141-.174-1.657.142-.618.472-1.069.964-1.416-.334-.46-.772-.873-1.237-1.194-.256.184-.542.302-.828.302-.674 0-1.222-.549-1.222-1.224 0-.437.23-.823.578-1.044l-.459-.857zm1.514 13.64c.225.178.51.283.818.283.785 0 1.422-.636 1.422-1.421 0-.785-.637-1.422-1.422-1.422-.785 0-1.421.637-1.421 1.422 0 .279.08.539.219.756l-2.115 1.494c.244.348.388.762.388 1.211 0 1.13-.916 2.046-2.046 2.046-.869 0-1.613-.543-1.907-1.3-.195.033-.396.051-.603.051-1.605 0-2.906-1.301-2.906-2.906 0-.698.246-1.339.657-1.84l-1.017-1.893c-.128.034-.262.053-.402.053-1.13 0-2.046-.915-2.046-2.045 0-1.131.916-2.047 2.046-2.047.984 0 1.808.695 1.997 1.619l1.388.721c.326-.259.734-.414 1.179-.414.251 0 .489.048.708.136l1.381-2.459c-.141-.21-.227-.459-.227-.73 0-.725.589-1.313 1.314-1.313.724 0 1.312.588 1.312 1.313 0 .724-.588 1.312-1.312 1.312-.205 0-.398-.047-.572-.13l-1.371 2.442c.349.349.563.832.563 1.365 0 .31-.074.603-.205.862l2.115 1.494z"/></svg></div>
+          <span class="skill-name">Docker</span>
+        </div>
+
+        <div class="skill-badge">
+          <div class="skill-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg></div>
+          <span class="skill-name">Tailwind</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTAFOLIO
+  ============================================ -->
+  <section id="portfolio" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Portafolio</h2>
+        <div class="w-16 h-1 bg-primary-200 mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-500 mt-4 text-lg">Proyectos que he desarrollado</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-14 fade-in-up">
+        <button data-filter="all" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Todos</button>
+        <button data-filter="publico" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Público</button>
+        <button data-filter="privado" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300">Privado</button>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Proyecto 1: TaskFlow -->
+        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100" data-category="publico">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=600&h=400&q=80"
+                 alt="TaskFlow"
+                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-primary-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Público</span>
+            <div class="absolute bottom-4 left-4 flex gap-2">
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">Django</span>
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">TaskFlow</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">App web de gestión de tareas con tablero kanban, autenticación de usuarios y notificaciones en tiempo real mediante WebSockets.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 2: MarketHub -->
+        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100" data-category="privado">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=600&h=400&q=80"
+                 alt="MarketHub"
+                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-primary-400/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Privado</span>
+            <div class="absolute bottom-4 left-4 flex gap-2">
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">Python</span>
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">Flask</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">MarketHub</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Plataforma e-commerce completa con carrito de compras, pasarela de pagos Stripe y panel de administración para gestión de productos.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 3: BlogAPI -->
+        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100" data-category="publico">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=400&q=80"
+                 alt="BlogAPI"
+                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-primary-500/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Público</span>
+            <div class="absolute bottom-4 left-4 flex gap-2">
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">MongoDB</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">BlogAPI</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">API RESTful documentada con Swagger, autenticación JWT y CRUD completo de artículos con categorías y comentarios.</p>
+          </div>
+        </div>
+
+        <!-- Proyecto 4: DataDash -->
+        <div class="project-card rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transition-all duration-500 border border-gray-100" data-category="privado">
+          <div class="relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400&q=80"
+                 alt="DataDash"
+                 class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            <span class="absolute top-4 left-4 bg-primary-400/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">Privado</span>
+            <div class="absolute bottom-4 left-4 flex gap-2">
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+              <span class="bg-white/90 text-primary-500 text-xs font-medium px-2.5 py-1 rounded-full">D3.js</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">DataDash</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">Dashboard interactivo con visualización de datos dinámicos, filtros avanzados y exportación de reportes en CSV y PDF.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACTO
+  ============================================ -->
+  <section id="contact" class="py-24 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in-up">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-500 tracking-tight">Contacto</h2>
+        <div class="w-16 h-1 bg-primary-200 mx-auto mt-4 rounded-full"></div>
+        <p class="text-gray-500 mt-4 text-lg">Hablemos de tu proyecto</p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100 fade-in-up">
         <form id="contact-form" class="space-y-6">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Nombre completo</label>
@@ -209,7 +359,7 @@
             <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Mensaje</label>
             <textarea id="message" name="message" rows="5" required
               class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-primary-300 focus:ring-2 focus:ring-primary-100 outline-none transition-all duration-300 text-gray-800 placeholder-gray-400 resize-none"
-              placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+              placeholder="Cuéntame sobre tu proyecto..."></textarea>
           </div>
 
           <button type="submit" id="submit-btn"
@@ -221,32 +371,33 @@
         <div id="form-message" class="hidden text-center mt-6 p-4 rounded-lg"></div>
       </div>
 
-      <!-- Social links -->
-      <div class="flex flex-wrap justify-center gap-8 mt-12">
-        <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
+      <div class="flex flex-wrap justify-center gap-8 mt-12 fade-in-up">
+        <a href="https://github.com/karenanco" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/karenanco" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           LinkedIn
         </a>
-        <a href="#" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          Instagram
-        </a>
-        <a href="mailto:hola@spaestudio.com" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
+        <a href="mailto:karenanco.dev@email.com" class="flex items-center gap-2 text-gray-500 hover:text-primary-500 transition-colors duration-300 text-sm font-medium">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          hola@spaestudio.com
+          karenanco.dev@email.com
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
   <footer class="bg-primary-500 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-white/80">&copy; 2024 spa estudio. Todos los derechos reservados.</p>
+        <p class="text-sm text-white/80">&copy; 2025 Karen Ñanco Vásquez. Todos los derechos reservados.</p>
         <div class="flex gap-6 text-sm">
-          <a href="#" class="text-white/70 hover:text-white transition-colors">Aviso de privacidad</a>
-          <a href="#" class="text-white/70 hover:text-white transition-colors">Términos</a>
+          <a href="https://github.com/karenanco" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/karenanco" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors">LinkedIn</a>
         </div>
       </div>
     </div>

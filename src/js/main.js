@@ -1,9 +1,9 @@
 /* ============================================
-   spa estudio — Main JavaScript
+   Karen Ñanco Vásquez — Main JavaScript
    ============================================ */
 
 // ==========================================
-// EMAILJS — Inicialización
+// EMAILJS
 // ==========================================
 (function () {
   const publicKey = 'TU_PUBLIC_KEY'; // TODO: Reemplazar con tu Public Key de EmailJS
@@ -11,7 +11,7 @@
 })();
 
 // ==========================================
-// NAVBAR — Efecto de scroll
+// NAVBAR
 // ==========================================
 function initNavbar() {
   const navbar = document.getElementById('navbar');
@@ -31,7 +31,7 @@ function initNavbar() {
 }
 
 // ==========================================
-// SMOOTH SCROLL — Navegación fluida
+// SMOOTH SCROLL
 // ==========================================
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -50,7 +50,6 @@ function initSmoothScroll() {
           behavior: 'smooth',
         });
 
-        // Cerrar menú mobile si está abierto
         const mobileMenu = document.getElementById('mobile-menu');
         if (!mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
@@ -61,7 +60,7 @@ function initSmoothScroll() {
 }
 
 // ==========================================
-// FILTROS — Proyectos del portafolio
+// FILTROS — Portafolio
 // ==========================================
 function initFilters() {
   const filterBtns = document.querySelectorAll('.filter-btn');
@@ -69,7 +68,6 @@ function initFilters() {
 
   filterBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
-      // Actualizar botón activo
       filterBtns.forEach(function (b) {
         b.classList.remove('active');
       });
@@ -84,9 +82,6 @@ function initFilters() {
           card.classList.add('hidden-card');
         }
       });
-
-      // Re-ajustar layout del grid después de la transición
-      // (evita que elementos ocultos sigan ocupando espacio)
     });
   });
 }
@@ -104,7 +99,6 @@ function initContactForm() {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // Deshabilitar botón mientras se envía
     submitBtn.disabled = true;
     submitBtn.textContent = 'Enviando...';
     formMessage.classList.add('hidden');
@@ -112,19 +106,17 @@ function initContactForm() {
 
     // ==========================================
     // TODO: Reemplazar con tus credenciales de EmailJS
-    // 1. Crea una cuenta en https://www.emailjs.com/
-    // 2. Conecta un servicio de correo
-    // 3. Crea un template de email
-    // 4. Reemplaza los valores abajo
+    // Crea una cuenta en https://www.emailjs.com/
+    // Conecta un servicio, crea un template y completa:
     // ==========================================
-    const serviceID = 'TU_SERVICE_ID';   // TODO: Reemplazar con tu Service ID
-    const templateID = 'TU_TEMPLATE_ID'; // TODO: Reemplazar con tu Template ID
+    const serviceID = 'TU_SERVICE_ID';   // TODO
+    const templateID = 'TU_TEMPLATE_ID'; // TODO
 
     emailjs
       .sendForm(serviceID, templateID, this)
       .then(
         function () {
-          formMessage.textContent = '¡Mensaje enviado con éxito! Te contactaremos pronto.';
+          formMessage.textContent = '¡Mensaje enviado con éxito! Te responderé pronto.';
           formMessage.className = 'success';
           formMessage.classList.remove('hidden');
           form.reset();
@@ -144,7 +136,7 @@ function initContactForm() {
 }
 
 // ==========================================
-// MOBILE MENU — Toggle
+// MOBILE MENU
 // ==========================================
 function initMobileMenu() {
   const menuBtn = document.getElementById('menu-btn');
@@ -158,7 +150,32 @@ function initMobileMenu() {
 }
 
 // ==========================================
-// INIT — Punto de entrada
+// SCROLL ANIMATIONS — IntersectionObserver
+// ==========================================
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in-up');
+
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  elements.forEach(function (el) {
+    observer.observe(el);
+  });
+}
+
+// ==========================================
+// INIT
 // ==========================================
 document.addEventListener('DOMContentLoaded', function () {
   initNavbar();
@@ -166,4 +183,5 @@ document.addEventListener('DOMContentLoaded', function () {
   initFilters();
   initContactForm();
   initMobileMenu();
+  initScrollAnimations();
 });

@@ -1,47 +1,27 @@
 /* ============================================
-   spa estudio — Custom Styles
+   Karen Ñanco Vásquez — Custom Styles
    ============================================ */
 
-/* Smooth scroll for the whole page */
 html {
   scroll-behavior: smooth;
 }
 
-/* Project card transitions for filter */
-.project-card {
-  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+/* ============================================
+   HERO — Grid pattern overlay
+   ============================================ */
+.hero-pattern {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-.project-card.hidden-card {
-  opacity: 0;
-  transform: scale(0.95);
-  pointer-events: none;
-  position: absolute;
-  visibility: hidden;
-}
-
-/* Filter button active state */
-.filter-btn.active {
-  background-color: #5f2b40;
-  color: white;
-  box-shadow: 0 4px 12px rgba(95, 43, 64, 0.3);
-}
-
-.filter-btn:not(.active) {
-  background-color: #f3f4f6;
-  color: #4b5563;
-}
-
-.filter-btn:not(.active):hover {
-  background-color: #e5e7eb;
-}
-
-/* Navbar scroll state */
+/* ============================================
+   NAVBAR — Scroll state
+   ============================================ */
 #navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 #navbar.scrolled #nav-logo {
@@ -65,7 +45,6 @@ html {
   background-color: #803d4f;
 }
 
-/* Navbar default (at top of page) */
 #navbar:not(.scrolled) {
   background: transparent;
   backdrop-filter: none;
@@ -94,7 +73,6 @@ html {
   background-color: white;
 }
 
-/* Mobile menu button */
 #menu-btn {
   color: white;
 }
@@ -103,7 +81,110 @@ html {
   color: #374151;
 }
 
-/* Form message states */
+/* ============================================
+   FILTER BUTTONS
+   ============================================ */
+.filter-btn.active {
+  background-color: #5f2b40;
+  color: white;
+  box-shadow: 0 4px 14px rgba(95, 43, 64, 0.3);
+}
+
+.filter-btn:not(.active) {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.filter-btn:not(.active):hover {
+  background-color: #e5e7eb;
+}
+
+/* ============================================
+   PROJECT CARDS — Filter & hover effects
+   ============================================ */
+.project-card {
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 20px 40px rgba(95, 43, 64, 0.1), 0 0 0 1px rgba(178, 91, 108, 0.2);
+  transform: translateY(-4px);
+}
+
+.project-card .group\/card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card.hidden-card {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+/* ============================================
+   SKILL BADGES
+   ============================================ */
+.skill-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skill-badge:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(95, 43, 64, 0.12);
+  border-color: rgba(178, 91, 108, 0.25);
+}
+
+.skill-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #5f2b40;
+  transition: transform 0.3s ease;
+}
+
+.skill-badge:hover .skill-icon {
+  transform: scale(1.15);
+  color: #803d4f;
+}
+
+.skill-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.01em;
+}
+
+.skill-badge:hover .skill-name {
+  color: #5f2b40;
+}
+
+/* ============================================
+   FADE-IN ANIMATIONS (Intersection Observer)
+   ============================================ */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   FORM MESSAGE STATES
+   ============================================ */
 #form-message.success {
   background-color: #ecfdf5;
   color: #065f46;
@@ -116,13 +197,14 @@ html {
   border: 1px solid #fecaca;
 }
 
-/* Selection color */
+/* ============================================
+   MISC
+   ============================================ */
 ::selection {
   background-color: #b25b6c;
   color: white;
 }
 
-/* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid #b25b6c;
   outline-offset: 2px;
