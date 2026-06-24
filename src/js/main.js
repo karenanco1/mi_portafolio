@@ -110,7 +110,7 @@ function initContactForm() {
     // Conecta un servicio, crea un template y completa:
     // ==========================================
     const serviceID = 'service_3s2ce1g';   // TODO
-    const templateID = 'template_gapp0co'; // TODO
+    const templateID = 'template_3eyxqu9'; // TODO
 
     emailjs
       .sendForm(serviceID, templateID, this)
